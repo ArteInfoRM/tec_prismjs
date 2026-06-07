@@ -13,7 +13,6 @@
  * @copyright 2007-2026 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  */
-
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -43,7 +42,7 @@ class Tec_prismjs extends Module
 
         $this->displayName = $this->l('Code and Prism.js integration');
         $this->description = $this->l('It highlights code snippets in blog posts and CMS pages with Prism.js.');
-        $this->ps_versions_compliancy = array('min' => '1.7.8.0', 'max' => _PS_VERSION_);
+        $this->ps_versions_compliancy = ['min' => '1.7.8.0', 'max' => _PS_VERSION_];
     }
 
     /**
@@ -114,13 +113,13 @@ class Tec_prismjs extends Module
             . '&configure=' . $this->name . '&tab_module=' . $this->tab . '&module_name=' . $this->name;
         $helper->token = Tools::getAdminTokenLite('AdminModules');
 
-        $helper->tpl_vars = array(
+        $helper->tpl_vars = [
             'fields_value' => $this->getConfigFormValues(),
             'languages' => $this->context->controller->getLanguages(),
             'id_language' => (int) $this->context->language->id,
-        );
+        ];
 
-        return $helper->generateForm(array($this->getConfigForm()));
+        return $helper->generateForm([$this->getConfigForm()]);
     }
 
     /**
@@ -130,38 +129,38 @@ class Tec_prismjs extends Module
      */
     protected function getConfigForm()
     {
-        return array(
-            'form' => array(
-                'legend' => array(
+        return [
+            'form' => [
+                'legend' => [
                     'title' => $this->l('Settings'),
                     'icon' => 'icon-cogs',
-                ),
-                'input' => array(
-                    array(
+                ],
+                'input' => [
+                    [
                         'type' => 'switch',
                         'label' => $this->l('Use Prism Okaidia'),
                         'name' => self::CONFIG_OKAIDIA,
                         'is_bool' => true,
                         'desc' => $this->l('Use the Prism dark theme.'),
-                        'values' => array(
-                            array(
+                        'values' => [
+                            [
                                 'id' => 'active_on',
                                 'value' => 1,
                                 'label' => $this->l('Enabled'),
-                            ),
-                            array(
+                            ],
+                            [
                                 'id' => 'active_off',
                                 'value' => 0,
                                 'label' => $this->l('Disabled'),
-                            ),
-                        ),
-                    ),
-                ),
-                'submit' => array(
+                            ],
+                        ],
+                    ],
+                ],
+                'submit' => [
                     'title' => $this->l('Save'),
-                ),
-            ),
-        );
+                ],
+            ],
+        ];
     }
 
     /**
@@ -171,9 +170,9 @@ class Tec_prismjs extends Module
      */
     protected function getConfigFormValues()
     {
-        return array(
+        return [
             self::CONFIG_OKAIDIA => (int) (bool) Configuration::get(self::CONFIG_OKAIDIA),
-        );
+        ];
     }
 
     /**
@@ -185,7 +184,7 @@ class Tec_prismjs extends Module
     {
         $useOkaidia = (string) Tools::getValue(self::CONFIG_OKAIDIA);
 
-        if (!in_array($useOkaidia, array('0', '1'), true)) {
+        if (!in_array($useOkaidia, ['0', '1'], true)) {
             return $this->displayError($this->l('Invalid configuration value.'));
         }
 
@@ -237,10 +236,10 @@ class Tec_prismjs extends Module
             $this->context->controller->registerStylesheet(
                 $id,
                 $path,
-                array(
+                [
                     'media' => 'all',
                     'priority' => (int) $priority,
-                )
+                ]
             );
 
             return;
@@ -264,10 +263,10 @@ class Tec_prismjs extends Module
             $this->context->controller->registerJavascript(
                 $id,
                 $path,
-                array(
+                [
                     'position' => 'bottom',
                     'priority' => (int) $priority,
-                )
+                ]
             );
 
             return;

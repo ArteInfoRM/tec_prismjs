@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Fixed
 
+- Fixed PrestaShop validator reports for license headers and coding standard rules.
 - Added support for shortcodes split across sibling HTML elements, such as CMS content where each code line is wrapped in a separate `<p>` tag.
 
 ## [1.1.0] - 2026-06-07
