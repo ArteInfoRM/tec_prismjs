@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Fixed
 
+- Scoped bundled Prism theme CSS to module-generated code blocks, preventing styles from affecting external inline code such as `<code class="language-it">`.
 - Fixed PrestaShop validator reports for license headers and coding standard rules.
 - Added support for shortcodes split across sibling HTML elements, such as CMS content where each code line is wrapped in a separate `<p>` tag.
 
