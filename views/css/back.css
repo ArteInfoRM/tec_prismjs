@@ -1,0 +1,17 @@
+/**
+ * 2009-2026 Tecnoacquisti.com
+ *
+ * @author    Tecnoacquisti.com
+ * @copyright 2009-2026 Tecnoacquisti.com
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ */
+.tec-prismjs-help {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f3f3f3;
+    font-size: 130%;
+}
+
+.tec-prismjs-languages {
+    columns: 2;
+}

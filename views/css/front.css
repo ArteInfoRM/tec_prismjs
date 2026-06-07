@@ -1,0 +1,56 @@
+/**
+ * 2009-2026 Tecnoacquisti.com
+ *
+ * @author    Tecnoacquisti.com
+ * @copyright 2009-2026 Tecnoacquisti.com
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ */
+.tec-prismjs-block {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+.tec-prismjs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0.75rem;
+    background: #2f2f2f;
+    color: #fff;
+}
+
+.tec-prismjs-language {
+    overflow: hidden;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.tec-prismjs-copy {
+    flex: 0 0 auto;
+    padding: 0.35rem 0.6rem;
+    border: 0;
+    background: #d03c17;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.8125rem;
+    line-height: 1.2;
+}
+
+.tec-prismjs-copy:hover,
+.tec-prismjs-copy:focus {
+    background: #555;
+    color: #fff;
+}
+
+.tec-prismjs-code {
+    display: block;
+    padding: 1rem;
+    overflow-x: auto;
+}
